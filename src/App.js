@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './bars/components/Header';
+import Explore from './contents/components/Explore';
+import bannerImg from './assets/homepage-banner1.jpg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <img className='w-full h-auto mt-10 max-h-96 object-cover' src={bannerImg} alt='bannerImg' />
+      <div className="flex justify-center p-4">
+        <div className="w-full max-w-7xl">
+          <Explore />
+        </div>
+      </div>
     </div>
   );
 }
