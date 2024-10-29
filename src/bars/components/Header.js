@@ -2,6 +2,7 @@ import React from "react";
 import kriya_logo from "../../assets/kriya-logo-Photoroom.png";
 import Login from "../../auth/components/Login";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -12,8 +13,9 @@ const Header = () => {
             <div className="p-2 bg-white shadow-md fixed top-0 left-0 w-full z-10">
                 <div className="flex justify-between items-center mx-3">
                     <div> 
-
+                        <Link to={'/'}>
                         <img width={"150px"} src={kriya_logo} alt="kriya_logo" />
+                        </Link>
                     </div>
                     <div>
                         <div className="flex px-4 py-3 rounded-xl border-2 bg-white overflow-hidden w-[400px] mx-auto font-[sans-serif]">

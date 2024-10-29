@@ -1,10 +1,13 @@
-// src/redux/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import yourReducer from './slices/yourSlice'; // replace this with your actual slice
+import { authSlice } from '../auth/slice/slice';
+import { fertilizerSlice } from '../productsDisplay/slice/slice';
+import { getUserSlice } from '../user_account/slice/slice';
 
 const store = configureStore({
   reducer: {
-    yourReducerName: yourReducer, // replace with your slice's name
+    auth: authSlice.reducer,
+    fertilizer:fertilizerSlice.reducer,
+    UserDetails:getUserSlice.reducer,
   },
 });
 
